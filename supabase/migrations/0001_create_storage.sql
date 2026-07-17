@@ -1,5 +1,5 @@
 -- IMPORTANT: Enable Row Level Security on Supabase storage objects table
-ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
+-- ALTER TABLE storage.objects ENABLE ROW LEVEL SECURITY;
 
 -- =========================================================================
 -- CHARACTER IMAGES BUCKET

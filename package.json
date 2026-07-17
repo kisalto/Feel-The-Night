@@ -1,6 +1,6 @@
 {
   "name": "feel-the-night",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A fighting game website for Under Night In-birth content",
   "main": "index.js",
   "directories": {
@@ -24,9 +24,11 @@
   },
   "homepage": "https://github.com/kisalto/Feel-The-Night#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.110.7"
+    "@supabase/supabase-js": "^2.110.7",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^26.1.1",
     "@vercel/node": "^5.8.26",
     "express": "^5.2.1",

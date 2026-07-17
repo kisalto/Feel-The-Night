@@ -1,7 +1,12 @@
-import { createClient } from '@supabase/supabase-js'
-import type { Database } from '../types/database.types'
+import { createClient } from '@supabase/supabase-js';
+import { Database } from '../types/supabase'; // Caminho para o arquivo gerado no Passo 2
 
-export const supabase = createClient<Database>(
-  process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-)
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!supabaseUrl || !supabaseServiceKey) {
+  throw new Error('Faltam as variáveis de ambiente do Supabase.');
+}
+
+// Criando o cliente injetando os tipos do Database
+export const supabase = createClient<Database>(supabaseUrl, supabaseServiceKey);
