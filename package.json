@@ -7,9 +7,9 @@
     "lib": "lib"
   },
   "scripts": {
-    "dev": "tsx watch src/app.ts",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/api/index.js",
+    "dev": "ts-node-dev api/index.ts"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "@vercel/node": "^5.8.26",
     "express": "^5.2.1",
     "supabase": "^2.109.1",
-    "typescript": "^7.0.2",
+    "typescript": "^5.9.3",
     "vercel": "^56.3.0"
   }
 }
